@@ -86,6 +86,8 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 results = num1 % num2;
             }
             
+            request.setAttribute("num1", num1);
+            request.setAttribute("num2", num2);
             request.setAttribute("calcResults", results);
         }
         catch(NumberFormatException n)
@@ -93,7 +95,6 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             String denied = "You must enter a digit";
             request.setAttribute("calcResults", denied);
         }
-        
         
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
     }
