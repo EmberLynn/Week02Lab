@@ -23,5 +23,6 @@
         <input type="submit" value="*" name="multi" />
         <input type="submit" value="%" name="mod" /><br>
         <p>${calcResults}
+        <a href="/age">Age Calculator
     </body>
 </html>
